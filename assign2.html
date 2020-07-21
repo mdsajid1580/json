@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-image: linear-gradient(to right, rgb(175, 250, 255) , rgb(103, 103, 241));
+        }
+        .ancor{
+            width: 300px;
+            text-align: center;
+            
+        }
+        h1{
+            text-align: center;
+            padding-top:50px;
+        }
+        span{
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Assignment 2- alert on different Events like click, hover, focus, mouseover, mouseout</h1>
+        <div class="ancor">
+        <a id="click" href="#"><h2>Click Event</h2></a>
+        <!-- Click In <input id="focus" type="text"> -->
+        <a id="focus" href="#"><h2>focus Event  <span>It will trun green when you focus on it.</span></h2></a>
+        <a id="mouseover" href="#"><h2>MouseOver Event</h2></a>
+        <a id="mouseout" href="#"><h2>MouseOut Event</h2></a>
+        </div>
+    </div>
+
+<script>
+    $("#click").click(function(event){
+        event.preventDefault();
+        alert("You have clicked on the link!!!");
+    });
+    $("#focus").focus(function(){
+        
+        $(this).css("color", "green");
+      
+    });
+    $("#focus").blur(function(){    
+        
+        $(this).css("color", "#13157d");
+      
+    });
+    
+    
+    $("#mouseover").mouseover(function(event){
+        event.preventDefault();
+        alert("You have put your mouse on the tag!!!");
+    });
+    $("#mouseout").mouseout(function(event){
+        event.preventDefault();
+        alert("You have put your mouse out of the tag!!!");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .form{
+            
+            
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+        input{
+            margin: 5px;
+        }
+        #forms{
+           border: 2px solid black;
+           padding:20px;
+
+        }
+        h1{
+            text-align: center;
+            margin-bottom: -100px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi, Please enter your details to confirm!!!</h1>
+    <div class="form">
+        
+        <form id="forms" >
+            <input id="email" type="Email" placeholder="Email Id" ><br>
+            <input id="pass" type="password" placeholder="Password" ><br>
+            <input id="cpass" type="password" placeholder="Confirm Password " ><br>
+            <input id="check"type="checkbox" required> Please Agree To Terms and Conditions!  <br>  
+            <input id="submit" type="submit">
+        </form>
+    </div>
+
+    <script>
+        $("#forms").submit(function(event){
+            event.preventDefault();
+            var em = $("#email").val();
+            var pp = $("#pass").val();
+            var cp = $("#cpass").val();
+            var submit = true;
+
+            if (em == null || em == "") {
+                alert("please enter valid Email id");
+                submit = false;
+            }
+            if (pp == null || pp == "") {
+                alert("please enter Password");
+                submit = false;
+            }
+            if (cp == null || cp == "") {
+                alert("please confirm Password");
+                submit = false;
+            }
+            if (pp != cp) {
+                alert("Pass must be matching");
+                submit = false;
+            }
+            if(submit){
+                alert("Form has been submitted sucessfully!!!")
+                submit = true;
+            }
+            
+            
+            
+
+        })
+    </script>
+</body>
+</html>

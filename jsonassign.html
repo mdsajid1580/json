@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: rgb(152, 42, 231);
+        }
+        .wrap{
+            text-align: center;
+        }
+        p{
+            text-align: left;
+            display:inline-block;
+            border:solid 2px black;
+            padding:10px;
+            background-color: coral;
+        }
+        #demo{
+            border:solid 2px black;
+            display:inline-block;
+            text-align: center;
+            margin-left:39%;
+            margin-top:30px;
+            padding:20px;
+        }
+        table,td,th{
+            border:1px solid black;
+            background-color: rgb(245, 120, 120);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Json Assignment</h1>
+        <p id ="main"></p>
+    </div>
+
+    <div id="demo">
+        
+    </div>
+    <script>
+        const Person1 = {
+            "Firstname":"John",
+            "Lastname":"Doe",
+            "DOB":"27/5/995"
+        }
+
+        $("#main").html(`<h2>First Name = ${Person1.Firstname}<br> Last Name = ${Person1.Lastname}<br> Date of Birth = ${Person1.DOB}</h2>`)
+        const Person2 = [{
+            "Firstname":"John",
+            "Lastname":"Doe",
+            "DOB":"27/5/995"
+        },
+        {
+            "Firstname":"John",
+            "Lastname":"Doe",
+            "DOB":"27/5/995"
+        },
+        {
+            "Firstname":"John",
+            "Lastname":"Doe",
+            "DOB":"27/5/995"
+        },
+        {
+            "Firstname":"John",
+            "Lastname":"Doe",
+            "DOB":"27/5/995"
+        },
+        {
+            "Firstname":"John",
+            "Lastname":"Doe",
+            "DOB":"27/5/995"
+        }]
+
+        $("#demo").html(`<h1> Json Data in table format </h1><table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+            </tr>
+            <tr>
+                <td>${Person2[0].Firstname}</td>
+                <td>${Person2[0].Lastname}</td>
+                <td>${Person2[0].DOB}</td>
+            </tr>
+            <tr>
+                <td>${Person2[1].Firstname}</td>
+                <td>${Person2[1].Lastname}</td>
+                <td>${Person2[1].DOB}</td>
+            </tr>
+            <tr>
+                <td>${Person2[2].Firstname}</td>
+                <td>${Person2[2].Lastname}</td>
+                <td>${Person2[2].DOB}</td>
+            </tr>
+            <tr>
+                <td>${Person2[3].Firstname}</td>
+                <td>${Person2[3].Lastname}</td>
+                <td>${Person2[3].DOB}</td>
+            </tr>
+            <tr>
+                <td>${Person2[4].Firstname}</td>
+                <td>${Person2[4].Lastname}</td>
+                <td>${Person2[4].DOB}</td>
+            </tr>
+        </table>`)
+
+    </script>
+</body>
+</htmOB
